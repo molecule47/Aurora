@@ -78,7 +78,7 @@ riddles = [
 
 ball = ["definitely", "no", "maybe", "obviously", "obviously not", "I don't know"]
 
-8ball_arg = ["owner", "molecule", "you suck", "u suck", "stfu", "Aurora", "aurora"]
+ball_arg = ["owner", "molecule", "you suck", "u suck", "stfu", "Aurora", "aurora"]
 
 roasts = [
     "you watch tiktok",
@@ -3047,7 +3047,7 @@ async def destroy(ctx, member: discord.Member):
 @bot.command(name = "8ball")
 async def eight_ball(ctx, *, message):
     msg = message
-    if any(word in msg for word in 8ball_args):
+    if any(word in msg for word in ball_arg):
         await ctx.reply("Listen here, the owner and I are different", mention_author = False)
     else:
         await ctx.reply("🎱️ "+ random.choice(ball), mention_author = False)
